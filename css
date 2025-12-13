@@ -54,7 +54,7 @@ body {
 
 /* --- 3. HERO HEADER (Visuel & Animation) --- */
 .hero-header {
-    background-image: url('../images/soldats_header.jpg'); /* REMPLACER PAR VOTRE IMAGE */
+    background-image: url('gettyimages-515350396.jpg'); /* REMPLACER PAR VOTRE IMAGE */
     background-size: cover;
     background-position: center;
     height: 50vh; /* Hauteur visuelle */
@@ -176,4 +176,5 @@ body {
     .hero-content h1 {
         font-size: 2.5em;
     }
+    
 }
