@@ -1,0 +1,179 @@
+/* --- 1. Charte Graphique et Base (WCAG) --- */
+:root {
+    --color-dark: #333;
+    --color-light: #ffffff;
+    --color-accent: #a4b640; /* Vert olive de l'exemple */
+    --color-background: #f8f8f8;
+    --font-primary: 'Arial', sans-serif; /* Utilisez une police de votre choix */
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- 2. HEADER et Navigation (FLEXBOX) --- */
+.header {
+    background-color: var(--color-dark);
+}
+.logo {
+    color: var(--color-light);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav-menu {
+    display: flex; /* FLEXBOX pour aligner logo et menu */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* FLEXBOX pour les liens */
+    gap: 25px;
+}
+.nav-menu a {
+    color: var(--color-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--color-accent);
+}
+
+/* --- 3. HERO HEADER (Visuel & Animation) --- */
+.hero-header {
+    background-image: url('../images/soldats_header.jpg'); /* REMPLACER PAR VOTRE IMAGE */
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Hauteur visuelle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Ombre pour améliorer la lisibilité du texte sur l'image */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); 
+}
+.hero-content {
+    color: var(--color-light);
+    text-align: center;
+}
+.hero-content h1 {
+    font-size: 3.5em;
+    color: var(--color-light);
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.highlight {
+    background-color: var(--color-accent);
+    padding: 2px 5px;
+    line-height: 1.2;
+    color: var(--color-dark);
+}
+
+/* --- 4. Animation CSS Requise --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-title {
+    animation: fadeIn 1.5s ease-out; /* Application de l'animation */
+}
+
+/* --- 5. Mise en page PRINCIPALE (CSS GRID) --- */
+.main-content {
+    padding: 40px 0;
+}
+
+.main-grid-layout {
+    /* CSS GRID pour la mise en page de l'accueil (Image + Texte) */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 50px;
+}
+
+.grid-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+.btn-primary:hover {
+    background-color: darken(var(--color-accent), 10%);
+}
+
+/* --- 6. Section Secondaire (FLEXBOX) --- */
+.facts-section h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+.facts-flex-row {
+    display: flex; /* FLEXBOX pour aligner les chiffres */
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-background);
+    border-radius: 5px;
+}
+.fact-item h4 {
+    color: var(--color-accent);
+    font-size: 2.5em;
+    margin: 0;
+}
+.fact-item p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* --- 7. Responsive Design (Critère R1.14) --- */
+@media (max-width: 992px) {
+    /* La grille devient une seule colonne sur tablette */
+    .main-grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Sur mobile, le menu et les faits passent en colonne */
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-menu ul {
+        justify-content: center;
+    }
+    .facts-flex-row {
+        flex-direction: column;
+    }
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+}
