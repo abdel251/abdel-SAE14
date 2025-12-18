@@ -1,27 +1,22 @@
 
 
-/* --- 1. CONFIGURATION GLOBALE ET VARIABLES (Charte Graphique) --- */
 
 :root {
     /* Couleurs Thème Militaire */
     --color-dark: #333;
     --color-light: #ffffff;
-    --color-accent: #a4b640; /* Vert olive de l'exemple */
-    --color-background: #f8f8f8;
-    --font-primary: 'Arial', sans-serif; /* Utilisez une police de votre choix */
+    --color-accent: #a4b640; 
+    --font-primary: 'Arial', sans-serif; 
     
-    /* Typographie */
     --font-primary: 'Arial', sans-serif;
     --font-heading: 'Helvetica Neue', sans-serif;
     
-    /* Espacements et Transitions */
     --spacing-sm: 10px;
     --spacing-md: 20px;
     --spacing-lg: 40px;
     --transition-speed: 0.3s;
 }
 
-/* Base et Reset pour l'accessibilité */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -35,7 +30,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Conteneur Central */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -43,7 +37,6 @@ body {
     padding: 0 var(--spacing-md);
 }
 
-/* Sémantique et Accessibilité (WCAG) */
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     color: var(--color-dark);
@@ -53,7 +46,6 @@ a {
     transition: color var(--transition-speed);
 }
 
-/* --- 2. BLOC : HEADER ET NAVIGATION (FLEXBOX) --- */
 
 .header {
     background-color: var(--color-dark);
@@ -93,7 +85,6 @@ a {
     border-bottom: 2px solid var(--color-accent-primary);
 }
 
-/* --- 3. BLOC : HERO SECTION (ANIMATION CSS - index.html) --- */
 
 .hero {
     background-image: url('../images/soldats_header.jpg'); 
@@ -103,7 +94,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Ombre pour garantir le contraste du texte (WCAG) */
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.55); 
 }
 
@@ -111,7 +101,6 @@ a {
     font-size: 4em;
     color: var(--color-light);
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-    /* Application de l'animation CSS requise */
     animation: slideInFromTop 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
@@ -127,7 +116,6 @@ a {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* --- 4. BLOC : BOUTONS D'APPEL À L'ACTION (CTA) --- */
 
 .btn {
     display: inline-block;
@@ -138,7 +126,6 @@ a {
     transition: transform var(--transition-speed), background-color var(--transition-speed);
 }
 
-/* Bouton Primaire (Accueil) */
 .btn--primary {
     background-color: var(--color-accent-primary);
     color: var(--color-dark);
@@ -150,7 +137,6 @@ a {
     transform: translateY(-2px);
 }
 
-/* Bouton Secondaire (Cartes Sujet/Détails) */
 .btn--secondary {
     background-color: var(--color-dark);
     color: var(--color-light);
@@ -163,7 +149,6 @@ a {
     color: var(--color-dark);
 }
 
-/* --- 5. BLOC : MAIN GRID (CSS GRID - index.html) --- */
 
 .main-grid {
     padding: var(--spacing-lg) 0;
@@ -183,7 +168,6 @@ a {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* --- 6. BLOC : FACTS FLEX (FLEXBOX - index.html) --- */
 
 .facts {
     padding: var(--spacing-lg) 0;
@@ -211,7 +195,6 @@ a {
     margin: 0 0 var(--spacing-sm);
 }
 
-/* --- 7. BLOC : ÉVÉNEMENTS MILITAIRES (FLEXBOX - sujet.html) --- */
 
 .events {
     padding: var(--spacing-lg) 0;
@@ -233,7 +216,6 @@ a {
     overflow: hidden;
 }
 
-/* Carte Vedette (Couleur demandée) */
 .event-card--featured {
     background-color: var(--color-accent-highlight); 
     border-color: var(--color-accent-highlight);
@@ -253,7 +235,6 @@ a {
     overflow: hidden;
 }
 
-/* --- 8. BLOC : À PROPOS (FLEXBOX - a-propos.html) --- */
 
 .about {
     padding: var(--spacing-lg) 0;
@@ -278,7 +259,6 @@ a {
     padding-left: 10px;
 }
 
-/* --- 9. BLOC : HISTOIRE GÉNÉRALE (CSS GRID - histoire-generale.html) --- */
 
 .grid-history-layout {
     display: grid; /* UTILISATION DE CSS GRID */
@@ -293,7 +273,6 @@ a {
     margin-bottom: var(--spacing-md);
 }
 
-/* --- 10. FOOTER --- */
 
 .footer {
     background-color: var(--color-dark);
@@ -308,11 +287,9 @@ a {
     text-decoration: none;
 }
 
-/* --- 11. RESPONSIVE DESIGN (Critère R1.14) --- */
 
 /* TABLETTE (992px et moins) */
 @media (max-width: 992px) {
-    /* Grilles et Flexbox majeurs passent en colonne */
     .grid-layout,
     .about__profile,
     .grid-history-layout {
@@ -338,7 +315,6 @@ a {
         gap: var(--spacing-md);
     }
     
-    /* Flexbox d'alignement (cartes, faits, alliances) passent en colonne */
     .facts__list,
     .events__list,
     .alliances-flex {

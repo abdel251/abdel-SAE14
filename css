@@ -1,10 +1,10 @@
-/* --- 1. Charte Graphique et Base (WCAG) --- */
+
 :root {
     --color-dark: #333;
     --color-light: #ffffff;
-    --color-accent: #a4b640; /* Vert olive de l'exemple */
+    --color-accent: #a4b640; 
     --color-background: #f8f8f8;
-    --font-primary: 'Arial', sans-serif; /* Utilisez une police de votre choix */
+    --font-primary: 'Arial', sans-serif; 
 }
 
 body {
@@ -21,7 +21,6 @@ body {
     margin: 0 auto;
 }
 
-/* --- 2. HEADER et Navigation (FLEXBOX) --- */
 .header {
     background-color: var(--color-dark);
 }
@@ -32,7 +31,7 @@ body {
     text-decoration: none;
 }
 .nav-menu {
-    display: flex; /* FLEXBOX pour aligner logo et menu */
+    display: flex; 
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
@@ -52,7 +51,6 @@ body {
     color: var(--color-accent);
 }
 
-/* --- 3. HERO HEADER (Visuel & Animation) --- */
 .hero-header {
     background-image: url('gettyimages-515350396.jpg'); /* REMPLACER PAR VOTRE IMAGE */
     background-size: cover;
@@ -62,7 +60,6 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    /* Ombre pour améliorer la lisibilité du texte sur l'image */
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); 
 }
 .hero-content {
@@ -82,7 +79,6 @@ body {
     color: var(--color-dark);
 }
 
-/* --- 4. Animation CSS Requise --- */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -92,13 +88,11 @@ body {
     animation: fadeIn 1.5s ease-out; /* Application de l'animation */
 }
 
-/* --- 5. Mise en page PRINCIPALE (CSS GRID) --- */
 .main-content {
     padding: 40px 0;
 }
 
 .main-grid-layout {
-    /* CSS GRID pour la mise en page de l'accueil (Image + Texte) */
     display: grid;
     grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
     gap: 50px;
@@ -128,7 +122,6 @@ body {
     background-color: darken(var(--color-accent), 10%);
 }
 
-/* --- 6. Section Secondaire (FLEXBOX) --- */
 .facts-section h3 {
     text-align: center;
     margin-bottom: 30px;
@@ -153,16 +146,13 @@ body {
     font-weight: bold;
 }
 
-/* --- 7. Responsive Design (Critère R1.14) --- */
 @media (max-width: 992px) {
-    /* La grille devient une seule colonne sur tablette */
     .main-grid-layout {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 576px) {
-    /* Sur mobile, le menu et les faits passent en colonne */
     .nav-menu {
         flex-direction: column;
         gap: 10px;
