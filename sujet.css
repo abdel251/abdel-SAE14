@@ -8,11 +8,11 @@
 /* --- 1. Variables Globales et Reset de Base (Charte Graphique) --- */
 
 :root {
-    /* Couleurs */
-    --color-dark: #2c3e50;         /* Bleu marine/Gris foncé (Fond principal/Texte) */
-    --color-light: #ffffff;        /* Blanc */
-    --color-accent: #a4b640;       /* Vert Olive (Accents et CTA) */
-    --color-secondary-bg: #f4f4f4; /* Gris très clair (Fonds de section) */
+       --color-dark: #333;
+    --color-light: #ffffff;
+    --color-accent: #a4b640; /* Vert olive de l'exemple */
+    --color-background: #f8f8f8;
+    --font-primary: 'Arial', sans-serif; /* Utilisez une police de votre choix */
     
     /* Typographie */
     --font-primary: 'Arial', sans-serif;
@@ -93,7 +93,7 @@ h1, h2, h3, h4 {
 /* --- 3. HERO SECTION (Visuel & Animation CSS) --- */
 .hero-header {
     /* REMPLACER PAR VOTRE IMAGE DANS images/ */
-    background-image: url('../images/soldats_header.jpg'); 
+    background-image: url('seconde-guerre-mondiale.jpg'); 
     background-size: cover;
     background-position: center 40%;
     height: 55vh; 
