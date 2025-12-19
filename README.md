@@ -14,7 +14,7 @@ https://github.com/abdel251
 * **Animations** : Utilisation de Keyframes CSS pour le dynamisme visuel.
 
 ## 📁 Gestion de Projet (R1.15)
-L'ensemble de la documentation relative à la gestion du projet se trouve dans le dossier `/Gestion de projet/`.
+L'ensemble de la documentation relative à la gestion du projet se trouve dans le dossier `/livrable/`.
 * **WBS** : Liste détaillée des tâches.
 * **Gantt** : Rétroplanning du projet (01/12 au 19/12).
 * **Suivi** : [Lien vers mon tableau Trello](https://trello.com/b/vCiVKN1d/mon-tableau-trello)
