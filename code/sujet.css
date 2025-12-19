@@ -1,0 +1,285 @@
+
+
+:root {
+       --color-dark: #333;
+    --color-light: #ffffff;
+    --color-accent: #a4b640; 
+    --color-background: #f8f8f8;
+    --font-primary: 'Arial', sans-serif; 
+    
+    --font-primary: 'Arial', sans-serif;
+    --font-heading: 'Helvetica Neue', sans-serif;
+    
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden; 
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.header {
+    background-color: var(--color-dark);
+}
+
+.nav-menu {
+    display: flex; /* FLEXBOX pour aligner logo et menu */
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+}
+
+.logo {
+    color: var(--color-light);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* FLEXBOX pour les liens */
+    gap: var(--spacing-lg);
+}
+
+.nav-menu a {
+    color: var(--color-light);
+    text-decoration: none;
+    padding: var(--spacing-sm) 0;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.hero-header {
+    background-image: url('seconde-guerre-mondiale.jpg'); 
+    background-size: cover;
+    background-position: center 40%;
+    height: 55vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); 
+}
+
+.hero-content {
+    text-align: center;
+    color: var(--color-light);
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    color: var(--color-light);
+    margin: 0;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    /* Application de l'animation CSS */
+    animation: slideInFromTop 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.highlight {
+    background-color: var(--color-accent);
+    padding: 2px 8px;
+    line-height: 1.2;
+    color: var(--color-dark);
+    font-weight: 900;
+}
+
+@keyframes slideInFromTop {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.main-content {
+    padding: var(--spacing-lg) 0;
+}
+
+.main-grid-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Image un peu plus large que le texte */
+    gap: var(--spacing-lg);
+    align-items: start;
+    margin-bottom: var(--spacing-lg);
+}
+
+.grid-image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grid-text-content h2 {
+    color: var(--color-accent);
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-top: var(--spacing-md);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #7d8c34; 
+    transform: translateY(-2px); 
+}
+
+.facts-section {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--color-secondary-bg);
+}
+
+.facts-section h3 {
+    text-align: center;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-lg);
+}
+
+.facts-flex-row {
+    display: flex; /* FLEXBOX pour aligner les faits */
+    justify-content: space-around;
+    gap: var(--spacing-md);
+    text-align: center;
+}
+
+.fact-item {
+    flex: 1;
+    padding: var(--spacing-md);
+    background-color: var(--color-light);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.fact-item h4 {
+    color: var(--color-accent);
+    font-size: 2.5em;
+    margin: 0 0 var(--spacing-sm);
+}
+
+.page-title {
+    text-align: center;
+    margin: var(--spacing-lg) 0;
+    color: var(--color-dark);
+}
+
+.content-section {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md);
+    border-left: 5px solid var(--color-accent);
+    background-color: var(--color-secondary-bg);
+    border-radius: 0 8px 8px 0;
+}
+
+.events-flex-container {
+    display: flex; 
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.event-card {
+    flex: 1; 
+    background-color: var(--color-light);
+    border: 1px solid #e0e0e0;
+    padding: var(--spacing-md);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.event-card h3 {
+    color: var(--color-accent);
+    margin-top: 0;
+    font-size: 1.4em;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 3px;
+    margin-top: var(--spacing-sm);
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+}
+
+.footer {
+    background-color: var(--color-dark);
+    color: var(--color-secondary-bg);
+    text-align: center;
+    padding: var(--spacing-md) 0;
+    margin-top: var(--spacing-lg);
+}
+
+.footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    .main-grid-layout {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    .nav-menu ul {
+        justify-content: center;
+        gap: var(--spacing-md);
+    }
+    .facts-flex-row,
+    .events-flex-container {
+        flex-direction: column;
+    }
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+}
